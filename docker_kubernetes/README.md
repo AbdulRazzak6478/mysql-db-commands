@@ -175,6 +175,7 @@ Docker Compose
 # kubernetes k8s
 # introduction of kubernetes
 - It was developed by Google.
+- it is also known as k8s.
 - It is an open-source system for automating deployment, scaling, and management of containerized applications.
 - it is container Orchestrator : it helps to group and manage multiple the containers easily .
 - `master` : server that can manage multiple nodes.
