@@ -1,5 +1,23 @@
 
 
+# node project from Github 
+
+```
+    FROM node
+
+    WORKDIR /developer/nodejs/app-from-github
+    RUN git clone "git-repository-link"
+
+    COPY . .
+
+    ENV PORT=3000
+
+    RUN npm ci
+
+    CMD ["npm","run","dev"]
+
+
+```
 
 # to clean up the whole system 
 ```
@@ -136,4 +154,16 @@ Docker Compose
 ```
     docker compose up -d
     docker compose down
+```
+
+# How to push images to dockerHub
+- Enter ` docker login ` on terminal.
+- Enter the ` Username ` and ` password `.
+- put tag on the image.
+```
+    docker tag <image_name> username/<tag_name>
+```
+- push it on dockerHub , by specifying same tag.
+```
+    docker push username/<tag_name>
 ```
