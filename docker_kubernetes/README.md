@@ -189,5 +189,6 @@ Docker Compose
     3. install kompose : to convert docker.yml to kubernetes
 ```
 - containerized the images into network or compose it.
+- - make the service connected and go through network bridge.
 - tag the containerized images.
 - push it to docker hub.
