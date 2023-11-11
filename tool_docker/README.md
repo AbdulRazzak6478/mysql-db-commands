@@ -95,3 +95,45 @@ To it similar for the `Booking-service`.
 - make a volume .
 - create container by specifying `--name` and add into network using `--network`. similar to `flight_service`
 - we can call the flight service through a api routes `/callingFlightService` and async function to call service using `axios`.
+
+Docker Compose
+- Gather your services in a folder.
+- create a file name it as `docker-compose.yml`
+```
+    version : "3"
+    networks :
+        micro-net:
+            driver :bridge
+    volumes :
+        API-GATEWAY-node-modules:
+        flight-service-node-modules:
+        booking-service-node-modules:
+    services : 
+        api_gateway:
+            build : pathOfTheService_./API-GATEWAY/Dockerfile
+            networks :
+                - micro-net or microservice-networks
+            ports : 
+                - "3001:3001"
+            volumes : 
+                - ./API-GATEWAY:/developer/nodejs/api-gateway <!-- mount -->
+                - API-GATEWAY-node-modules:/developer/nodejs/API-GATEWAY/node_modules <!-- volume -->
+            environment :
+        flight-service :
+            build :
+            networks :
+                - micro-net or microservice-networks
+            ports :
+            volumes:
+        booking_service : 
+            build :
+            networks :
+                - micro-net or microservice-networks
+            ports :
+            volumes:
+```
+- To run docker compose , d = detach, it runs all containers in detached mode  kind of -dit flag
+```
+    docker compose up -d
+    docker compose down
+```
