@@ -1,12 +1,25 @@
-FROM node 
+# API-GATEWAY file code 
 
-WORKDIR /Developer/demo_docker_comtainer
+FROM node
+
+WORKDIR /c/Users/ABDUL RAZZAK/Desktop/node-backend/node_start/Auth-gateway
 
 COPY . .
 
 RUN npm ci
 
-CMD ["npm","start"]
+CMD ["npm","run","dev"]
+
+# FlightService
+FROM node
+
+WORKDIR /c/Users/ABDUL RAZZAK/Desktop/node-backend/node_start/FlightService
+
+COPY . .
+
+RUN npm ci
+
+CMD ["npm","run","dev"]
 
 # to clean up the whole system 
 # $/> docker system prune -a

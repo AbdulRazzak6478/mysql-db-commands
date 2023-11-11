@@ -37,6 +37,7 @@
 - go inside bash shell
 - ` $/> apt-get install vim`
 
+
 # Docker volume
 - Volumes provide you to manage corresponding store data inside container.
 - Data can store in container itself and it can persist once the container is remove or replace.
@@ -60,4 +61,32 @@
 
 ```
     $/> docker run -it --init --publish 4000:3000 -v "$(pwd)":/Developer/nodejs/flight-service -v flight_service_node_modules:/Developer/nodejs/flight-service/node_modules  flight_service_img:latest 
+```
+
+# Communication between Microservices using Docker
+- To do this technically we need to prepare a network bridge and whoever has to communicate, they has to go through this bridge.
+- Bridge will be kind of like a interface between all of them which will be redirecting routes to other containers .
+
+- Command to create a network bridge .
+```
+    docker network create microservices-network
+```
+you will get a unique `hash`, `Driver` is a additional tool required to happened this network.
+Give the other service a name .
+Create a volume for the `flights-service-node-modules`
+```
+    docker run -it --init --name flights_service -p 3000:3000 -v "$(pwd)":/developer/nodejs/flights-service -v flights-service-node-modules:/developer/nodejs/flights-service/node_modules flights-service:latest
+```
+- name is assign to that container, so that we can use that to refer this container in `API GATEWAY service container` , change in `.env` with required name of that container.
+To similar to API-GATEWAY .
+```
+    docker run -it --init --name api_gateway -p 3000:3000 -v "$(pwd)":/developer/nodejs/API-GATEWAY -v API-GATEWAY-node-modules:/developer/nodejs/API-GATEWAY/node_modules api-gateway-service:latest
+```
+```
+    docker inspect microservices-network 
+```
+no containers attach to it .
+- Attach network to the services flights and api-gateway. 
+```
+    docker run -it --init --name api_gateway --network <nameOfNetwork_microservices-network> -p 3000:3000 -v "$(pwd)":/developer/nodejs/API-GATEWAY -v API-GATEWAY-node-modules:/developer/nodejs/API-GATEWAY/node_modules api-gateway-service:latest
 ```
