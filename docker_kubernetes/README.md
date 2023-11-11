@@ -167,3 +167,26 @@ Docker Compose
 ```
     docker push username/<tag_name>
 ```
+
+
+
+
+
+# kubernetes k8s
+# introduction of kubernetes
+- It was developed by Google.
+- It is an open-source system for automating deployment, scaling, and management of containerized applications.
+- it is container Orchestrator : it helps to group and manage multiple the containers easily .
+- `master` : server that can manage multiple nodes.
+- `node` : actual servers or kind of virtual machine, one node can run multiple servers.
+- `Pods `: it acts as atomic units, a single entity all together, all the containers might run with in a `Pod` might share a same network. It is a smallest deployable units in computing that can create and manage kubernetes.
+- tool => minikube.
+- install 
+```
+    1. install kubectl
+    2. install minikube
+    3. install kompose : to convert docker.yml to kubernetes
+```
+- containerized the images into network or compose it.
+- tag the containerized images.
+- push it to docker hub.
