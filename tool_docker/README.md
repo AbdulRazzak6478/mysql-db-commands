@@ -90,3 +90,8 @@ no containers attach to it .
 ```
     docker run -it --init --name api_gateway --network <nameOfNetwork_microservices-network> -p 3000:3000 -v "$(pwd)":/developer/nodejs/API-GATEWAY -v API-GATEWAY-node-modules:/developer/nodejs/API-GATEWAY/node_modules api-gateway-service:latest
 ```
+To it similar for the `Booking-service`.
+- create image.
+- make a volume .
+- create container by specifying `--name` and add into network using `--network`. similar to `flight_service`
+- we can call the flight service through a api routes `/callingFlightService` and async function to call service using `axios`.
