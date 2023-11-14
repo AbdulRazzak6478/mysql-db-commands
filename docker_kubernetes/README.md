@@ -260,6 +260,8 @@ exec
     docker build -t app-from-github-with-env .
 
     docker run -it --init --publish 3000: 4000 app-from-github-with-env:latest
+
+    # EXPOSE 3000  -> connect port to random port in the host system
 ```
 
 # to clean up the whole system
