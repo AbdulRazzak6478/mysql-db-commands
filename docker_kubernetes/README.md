@@ -1,3 +1,22 @@
+# Devops
+- Development Department -> `Dev`.
+- Operation Department   -> `Ops`.
+
+Development Department
+- Design.
+- Code and Develop .
+- Features.
+- Bugs fixing.
+
+Operation Department
+- Manage Servers.
+- Check Security.
+- Scaling application and Backup.
+- Check performance to know how much project is stable.
+
+Dev <--- bugs ---> Ops
+Dev <---Feedback loop ---> Ops
+
 
 
 # node project from Github 
@@ -189,6 +208,6 @@ Docker Compose
     3. install kompose : to convert docker.yml to kubernetes
 ```
 - containerized the images into network or compose it.
-- - make the service connected and go through network bridge.
+- make the service connected and go through network bridge.
 - tag the containerized images.
 - push it to docker hub.
