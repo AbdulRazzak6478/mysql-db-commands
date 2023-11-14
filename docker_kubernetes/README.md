@@ -64,6 +64,26 @@ Docker Containers
 - We can use it to build consistent pre build environment and doesn't matter which Os is using.
 - portable containers or virtual environment.
 
+Benefits od Docker
+- container ensures that , they behave in same way in any OS that you boot up this docker containers.
+- containers is isolated with all dependencies ,config ... into the host machine ( isolated from any machine or services or operations).
+- we can ensures manually two containers to communicate.
+
+Install docker for windows
+Install docker Hub (poll of images)
+
+```
+    pwd
+    docker pull node <!-- to download node image -->
+    <!-- -it for to open terminal to interact --> 
+    <!-- --rm is to remove container when you exit or stop the container -->
+    <!-- docker run -it --rm  <name_of_image> -->
+    docker run -it --rm  node  <!-- it clean up the container from docker desktop -->
+    docker run -it node <!-- to manually delete container -->
+    docker ps <!-- to see all running processes -->
+    docker kill <container_hash_id> <!-- to kill the container-->
+```
+
 # node project from Github 
 
 ```
