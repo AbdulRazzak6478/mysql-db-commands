@@ -17,7 +17,29 @@ Operation Department
 Dev <--- bugs ---> Ops
 Dev <---Feedback loop ---> Ops
 
+Benefits of DevOps
+- Productivity increase.
+- Speed high.
+- More Collaboration.
+- Less Load 
 
+Tools 
+- Github
+- Linux
+- Kubernetes
+- Docker
+- Jenkins
+
+Dev ( Plan => Code => Build => Test ) => Ops ( Release => Deploy => Operate)  => monitor
+
+Dev -> CI (Continuos Integration)
+Ops -> CD (Continuos Deployment)
+
+Cloud Servers ( AWS, Azure, google Cloud, Digital Ocean )
+- These Platform rent data machines into there data centers ,`Account`, `rent machines`.
+- Less maintainence 
+- Services allows users to do some configurations to used an operation and boot up, But not infinite number machines.
+- Virtual Machines VM ( instance of machine)
 
 # node project from Github 
 
