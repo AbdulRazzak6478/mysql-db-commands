@@ -41,6 +41,29 @@ Cloud Servers ( AWS, Azure, google Cloud, Digital Ocean )
 - Services allows users to do some configurations to used an operation and boot up, But not infinite number machines.
 - Virtual Machines VM ( instance of machine)
 
+Introduction to containers
+-  It give lot of security and resource management feature.
+- it is isolated.
+- cannot handle multiple physical server machines then go to public cloud.
+- in public cloud there would be a case that multiple VM go together into be hardware, they might interact, some security features might be leaked , crash in one of the VM that might need to hardware failure or immediate a restart of actual hardware machine that can cause down time to other VM.
+
+Docker Image
+- we can consider them as a `blue print` of some already made containers .
+- consider docker images as a drawing a picture of your favorite toy. It contains the details of how your toy looks.
+- `Definition ` : It is a snapshot or a blue print (design/details/instruction) of a complete environment for an application.
+- It includes every thing like what the application needs to run , such as libraries , dependencies , configs etc.
+- It kind of encapsulates all the application and all the requirement together.
+
+Docker Containers
+- Consider it like a `magical box` that can hold your favorite toy inside.
+- internally hold the toy features.
+- when you had your image , you use the magical box to create an exact copy of your toy.
+- `definition` : A Container is an actual instance of the environment configured by the docker image , when we run a docker image, it creates a live and running containers.
+- These containers are isolated and light-weight virtual machines.
+- A big diff b/w containers and VMs is that containers show the host OS , Kernel.
+- We can use it to build consistent pre build environment and doesn't matter which Os is using.
+- portable containers or virtual environment.
+
 # node project from Github 
 
 ```
