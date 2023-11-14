@@ -82,6 +82,22 @@ Install docker Hub (poll of images)
     docker run -it node <!-- to manually delete container -->
     docker ps <!-- to see all running processes -->
     docker kill <container_hash_id> <!-- to kill the container-->
+    whoami
+    pwd
+    cat /etc/issue
+    echo "hello world"
+    docker pull alpine <!-- linux container-->
+    <!-- to run container with flags -->
+    docker run alpine
+    docker run -it alpine ls
+    docker run -it --rm alpine ls 
+    docker ps ( to list down containers)
+    ps aux ( to check processes running)
+    docker run --detach -it alpine <!-- to run container in background -->
+    docker run attach <container_hash_id> <!-- to get in the container in background -->
+    docker rm <container_image> <!-- to remove container -->
+    docker kill <name> <!-- to kill container -->
+    
 ```
 
 # node project from Github 
