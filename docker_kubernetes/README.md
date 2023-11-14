@@ -93,12 +93,55 @@ Install docker Hub (poll of images)
     docker run -it --rm alpine ls 
     docker ps ( to list down containers)
     ps aux ( to check processes running)
+
+
     docker run --detach -it alpine <!-- to run container in background -->
     docker run attach <container_hash_id> <!-- to get in the container in background -->
+
+    docker run -dit <container_hash_id> <!--short hand for to get in the container in background -->
     docker rm <container_image> <!-- to remove container -->
     docker kill <name> <!-- to kill container -->
     
 ```
+```
+    <!-- to give custom names -->
+    docker run -it --detach --name custom_node <nameOfTheImage>
+
+    <!-- to get linux terminal -->
+    docker run -it node bash 
+
+    docker pull node:slim ->tag
+     
+    <!-- Tag is a kind of label that given to diff version of docker images -->
+    docker inspect node ( to get details about image)
+     - which OS  ?
+     - architecture ?
+     - command ?
+     - env files ?
+    
+     docker run -dit python or hash_id
+
+     docker ps
+
+     docker pause hash_id ( to pause containers)
+
+     docker unpause hash_id
+
+     docker run -dit node
+
+     docker exec -it hash_id bash ( to enter into bash shell)
+
+```
+
+Run
+- run takes a image and create a brand new container and on that just newly created container it help to create a container (mention image).
+
+exec
+- already bunch of container are created that you need to execute that container (after detach) [mention container]
+```
+    docker exec -it <name> ls
+```
+
 
 # node project from Github 
 
