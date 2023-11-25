@@ -280,6 +280,13 @@ exec
 
 ```
     $/> docker run -it --init --publish <host_port> : <container_port> <image_name>:latest
+
+    docker run -dit --init --publish 3000:3000 -v "$(pwd)":/desktop/node-backend/containerized-microservices-using-node/Flight_service  flight-service:latest
+
+    docker run -dit --init --publish 3002:3002 -v "$(pwd)":/desktop/aws-deploy-basic-app my-aws-app:latest   
+
+    <!-- run on cmd -->
+
 ```
 
 # Bind mount
