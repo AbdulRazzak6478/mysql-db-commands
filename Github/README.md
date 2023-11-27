@@ -51,3 +51,13 @@ Git remote commands
     git remote set-url origin <updated_URL>     // to change URL
 
 ```
+
+Git checkout
+```
+    git checkout <fileName>                     // match with last commit file and fit status clean
+    git checkout -f                             // matching all previous commit file
+
+    git diff                                    // it will compare working directory to staging area
+    git rm --cached <filename>                  // remove from staging area
+```
+
