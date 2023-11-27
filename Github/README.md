@@ -34,9 +34,20 @@ Git basic commands
     rm -rf <fileName>                   // to delete the file
     git reset <commit_id>               // It will remove all the update or commits of above it
 ```
+
 Git stash commands
 ```
     git stash <file>                    // to store files or changes in stage
     git stash pop                       // it will pop out the files from stash
     git stash clear                     // it will clear the file those are not committed are gone permanently
+```
+
+Git remote commands
+```
+    git remote                              // to check all origin URLs
+    git remote add origin Github_URL        // to add Url Origin
+    git remote remove <origin_name>         // to remove added origin from the folder
+    git remote -v                            // it will show all the URL attached to the folder or connected to particular folder
+    git remote set-url origin <updated_URL>     // to change URL
+
 ```
