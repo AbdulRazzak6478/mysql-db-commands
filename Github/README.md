@@ -61,3 +61,11 @@ Git checkout
     git rm --cached <filename>                  // remove from staging area
 ```
 
+Git branch
+```
+    git branch                              // to check branches
+    git branch -M feature1                      // to create branch
+    git checkout feature1                       // to switch branch to feature1
+    git merge feature1                          // to merge branch , go to the main branch and merge
+    git checkout -b <branchName>                // to create and directly switch to that branch 
+```
