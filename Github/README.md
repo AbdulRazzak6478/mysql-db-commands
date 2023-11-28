@@ -81,6 +81,10 @@ Git branch
     git checkout feature1                       // to switch branch to feature1
     git merge feature1                          // to merge branch , go to the main branch and merge
     git checkout -b <branchName>                // to create and directly switch to that branch 
+
+    git log --graph
+    git log --all --decorate --oneline --graph     // to get in graph order
+
 ```
 
 Git github commands
@@ -159,3 +163,24 @@ hashing -> graph/tree data structure
 
     git cat-file -p <hashId>
 ```
+
+
+Git Tags
+```
+    git tag -a v1 -m "tag1"             // to give tag as "tag:v1"
+
+    git show                            // to get tags
+    git show v1                         // to get tags
+    git push --tags origin master       // to push
+
+```
+
+# GSOC or open source
+- fork the repo
+- `git clone URL`
+- cd folderName
+- git checkout -b `branch_name`
+- my repo is origin and parent repo is upstream
+- `git remote add upstream <URL>`
+- `git pull upstream` // to pull the changes or content from upstream
+- `git pull upstream <branchName>`
