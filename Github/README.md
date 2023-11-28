@@ -85,6 +85,10 @@ Git branch
     git log --graph
     git log --all --decorate --oneline --graph     // to get in graph order
 
+    git checkout commit_id  // head pointer to this commit
+
+    git branch -f master <commit_id>        // to refer pointer to that commit
+
 ```
 
 Git github commands
@@ -184,3 +188,29 @@ Git Tags
 - `git remote add upstream <URL>`
 - `git pull upstream` // to pull the changes or content from upstream
 - `git pull upstream <branchName>`
+
+COMMANDS
+```
+    git clean           // delete untracked files
+    git clean -f        // forcefully remove working files
+    git clean --dry-run  // would remove file
+    git clean -d 
+    git clean -d --dry-run // it is for remove directories
+    git clean -d -f         // it will delete files and folder
+    git clean -f           // for files
+
+
+    git checkout commit_id  // head pointer to this commit
+    git log --all --decorate --oneline --graph
+```
+
+Log Tech
+```
+    git log --since="yesterday"         // or "1 minute ago" ......
+    git log --grep=comment_name         // to see the specific commit details
+    git log --since=10.minute
+
+    git log commit_id^1                 // one parent commit details
+    git log commit_id~3                 // to go to grand parents
+    ^ (give nth parent)
+```
