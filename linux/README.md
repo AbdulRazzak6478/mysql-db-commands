@@ -16,5 +16,17 @@ Linux Fundamentals
     ls -l
     ls -a                       // hidden folders
     ls -lh                      // size of the file with respect to files
+    ls -l                      // size of the file with respect to files
+    ls -lg                      // size of the file with respect to files
+    ls -a .                    // also show folder staring from .
+```
 
+```
+    mkdir folder                 // to create folder
+    touch readme.md              // to create a blank file
+    cat <fileName>              // to print the content of the file
+    rm <fileName>              // to remove the file
+    rmdir foldername              // to remove the directory , will not deleted it bcoz it is empty
+    rm -r subfolder               // delete the folder
+    rm -rf subfolder            // to get force fully delete
 ```
