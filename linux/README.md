@@ -77,3 +77,14 @@ in normal mode
     to move file into folder
     mv fileName   ../folder........file.txt
 ```
+
+To zip and unzip
+```
+    ex : tar -cf "nameoffile.zip" file1 file2
+    tar -cf archive.zip  file1 file2
+
+    // to  unzip
+    tar -xvzf archive.zip
+
+    tar xf archive.zip -c extract   // to extract
+```
