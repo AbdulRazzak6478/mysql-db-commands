@@ -80,3 +80,17 @@ Git github commands
 ```
     git clone Github_URl                          // to clone the project 
 ```
+
+Git starter
+`git status`
+Three areas
+- Working area
+- staged area
+- repository area
+
+Working area :
+- It is not track by git
+- untracked files
+- there can be a bunch of files that are no currently handled by git.
+- It means that changes done or to be done in those files are not managed by git yet.
+- a file which is in working area is considered to be not in the staging area, when we do `git status` and we see a bunch of `untracked files`.
