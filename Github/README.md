@@ -104,3 +104,12 @@ Stage Area :
     git add .                                // for all files to stage area
     git rm --cached <fileName>              // to unstaged the file ( for new added file , not for committed file)
 ```
+
+
+Repository Area :
+- This area actually contains the details of all you previous registered version, and the files in this area.
+- git already manages them and knows their version history.
+- `commit ` : It is a particular version of the project, it captured a snapshot of the project's staged changes and creates a version out of it.
+
+
+
