@@ -111,5 +111,10 @@ Repository Area :
 - git already manages them and knows their version history.
 - `commit ` : It is a particular version of the project, it captured a snapshot of the project's staged changes and creates a version out of it.
 
-
+```
+    git commit          // it opens Vim editor to write message -> press "i" to enable to write message , for save :[ escape ->:wq]
+    git log             // to see all commits  , to exit log :press -> q
+    git restore <fileName>  // it will discard everything that are in stagging area but not committed yet.
+    git restore --staged <fileName>    // to unstage the files
+```
 
