@@ -235,3 +235,31 @@ Note : if you make another commit before this then you will not get back to that
 - multiple ORIG_HEAD we can move nad come back
 
 
+Mixed Mode
+-  `git reset --mixed HEAD~` (default is mixed)
+- it is not just start pointing to the commit recent to but whatever work is there in the staging area,
+- it is overwrite the staging area with that commit work.
+- `git ls-files `, it will show the all staged files.
+- `git ls-files -s`
+- git blobOfC2 
+```
+    git checkout blobOdC2
+
+    git reset blobC2
+    git reset --hard HEAD~             
+    git reset --mixed HEAD~             // the content of staging area brought to the working area
+```
+
+- 1.moving head and branch pointer
+- 2.reset the staging index
+- 3.reset the working area
+```
+    git reset --soft commitId  (a)
+    git reset --mixed commitId  (a,b)  // to get commit into staged
+    git reset --hard commitId  (a,b,c)  // to get commit into staged and working area
+
+
+    git revert HEAD
+    git --no -paper log
+    git revert HEAD~1
+```
