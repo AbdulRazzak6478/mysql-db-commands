@@ -94,3 +94,13 @@ Working area :
 - there can be a bunch of files that are no currently handled by git.
 - It means that changes done or to be done in those files are not managed by git yet.
 - a file which is in working area is considered to be not in the staging area, when we do `git status` and we see a bunch of `untracked files`.
+
+
+Stage Area :
+- What all files are going to be part of the next version that will create
+- this staging area is the place where git knows what changes will be done from the last version to the next version.
+```
+    git add <file_name>                     // to add file in stage area that to be commit or create new version
+    git add .                                // for all files to stage area
+    git rm --cached <fileName>              // to unstaged the file ( for new added file , not for committed file)
+```
