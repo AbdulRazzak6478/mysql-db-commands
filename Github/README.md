@@ -214,3 +214,24 @@ Log Tech
     git log commit_id~3                 // to go to grand parents
     ^ (give nth parent)
 ```
+
+Checkout
+- checkout is to move our head point
+- `git reset` is of three mode
+- 1.soft mode
+- 2.mixed mode
+- 3.hard mode
+
+Soft Mode
+```
+    git reset --soft commit_id          // both head,master move to that commit
+    git reset ORIG_HEAD                 // it will come back to last commit that you are pointing to .
+
+Note : if you make another commit before this then you will not get back to that previous pointed commit.
+    git --no -paper log
+    git reset --soft HEAD~2
+```
+- After moving to a specific ancestor commit if you do a new commit then head is pointing to that commit ,you are not going to point the commit that you are on before moving to previous one
+- multiple ORIG_HEAD we can move nad come back
+
+
