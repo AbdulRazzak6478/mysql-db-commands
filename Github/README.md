@@ -116,5 +116,16 @@ Repository Area :
     git log             // to see all commits  , to exit log :press -> q
     git restore <fileName>  // it will discard everything that are in stagging area but not committed yet.
     git restore --staged <fileName>    // to unstage the files
+    // in already committed file changes are there in working directory
+
+    git add <fileName>          // to add in stagging area
+    // the back on the stagging area
+    // to get back on working directory   "git restore --staged <fileName>"
 ```
+
+
+Between rm and restore
+- If we want to move the whole file back to the untracked state .then we do `git rm <fileName>`.
+- Otherwise if we just want the changes to be moved in working area or staging area then we `git restore <fileName>`.
+- `git diff commit_id1 commit_id2 ` 
 
