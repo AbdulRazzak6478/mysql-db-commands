@@ -56,6 +56,13 @@ Git remote commands
     git remote -v                            // it will show all the URL attached to the folder or connected to particular folder
     git remote set-url origin <updated_URL>     // to change URL
 
+    git push -u origin master                  // to push changes to the connection
+    git remote rm <nameOfOrigin>                // to delete a remote connection
+    git remote rename <oldName> <newName>       // to change connection name
+
+
+    git pull origin master                    // To revert back the changes from github to local
+
 ```
 
 Git checkout
@@ -129,3 +136,26 @@ Between rm and restore
 - Otherwise if we just want the changes to be moved in working area or staging area then we `git restore <fileName>`.
 - `git diff commit_id1 commit_id2 ` 
 
+
+# How internally git works
+hashing -> graph/tree data structure
+
+- git is like key value pair
+- `key`: hash of the data  (security hash algorithm) 
+- `value`:data
+- git uses a cryptographic hash function -> SHA1
+-  for a given data it outputs 40 digits Hexadecimal number, the hash value is always same for same data.
+- after prepared the hash , git compresses the data in a `blob` and stores some meta data about data.
+- |blob   | <size>      |
+- |\0     | delimeter   |
+- |content|             |
+```
+    git init
+    ls -a
+    tree .git   (structure)
+    find .git/objects               // to get details of the objects
+    find .git/objects -type f
+    echo 'test content' | git hash-object -w --stdin   // to get hash id
+
+    git cat-file -p <hashId>
+```
