@@ -22,6 +22,12 @@ Git configurations
     git config --list
 ```
 
+Git start
+```
+    git init            // to initialized
+    rm -rf .git         // to remove .git file
+```
+
 Git basic commands
 ```
     ls -a
@@ -68,4 +74,9 @@ Git branch
     git checkout feature1                       // to switch branch to feature1
     git merge feature1                          // to merge branch , go to the main branch and merge
     git checkout -b <branchName>                // to create and directly switch to that branch 
+```
+
+Git github commands
+```
+    git clone Github_URl                          // to clone the project 
 ```
